@@ -1,0 +1,70 @@
+// old
+{
+    "country": {
+        "name": "",
+        "intro": "",
+        "currency_notes": "",
+        "stamps": [
+            {
+                "stampbox_alignment": [
+                    {
+                        "image": "",
+                        "caption": ""
+                    }
+                ],
+                "setHead": "",
+                "splitHeading": "",
+                "table": {
+                    "cpnr_cs": "",
+                    "typenr_cs": "",
+                    "descr_cs": "",
+                    "price_unused_cs": "",
+                    "price_used_cs": ""
+                },
+                "design_foot_note": "",
+                "footnote_cs": ""
+            }
+        ]
+    }
+}
+
+
+{
+    "countryName": "Abu Dhabi",
+    "countryIntro": "The largest of the Trucial States...",
+    "countryCurrencyNotes": "1964. 100 naye paise = 1...",
+    "imageSrc1": "src",
+    "imageContext1": "Saker Falcon",
+    "tableHeading1": "1965. Falconry.",
+    "table1": [
+        {
+            "sgNumber": "123",
+            "typeNumber": "1",
+            "priceUsed": "50.00",
+            "priceUnused": "100.00"
+        },
+        {
+            "sgNumber": "124",
+            "typeNumber": "2",
+            "priceUsed": "53.00",
+            "priceUnused": "140.00"
+        },
+    ],
+    "table1FootNote": "Designs: 40n.p., 2r. Other types of Saker Falcon on gloved hand.",
+    "tableHeading2": "1966. Nos. 1/11 surch in new currency",
+    "table2": [
+        {
+            "sgNumber": "125",
+            "typeNumber": "3",
+            "priceUsed": "5.00",
+            "priceUnused": "10.00"
+        },
+        {
+            "sgNumber": "126",
+            "typeNumber": "4",
+            "priceUsed": "8.00",
+            "priceUnused": "10.00"
+        },
+    ],
+    "sgNumbers": ["123", "124", "125", "126"]
+}

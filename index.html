@@ -1,0 +1,84 @@
+<html>
+
+<head>
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+
+    <script type="text/javascript">
+
+        function serializeXmlNode(xmlNode) {
+            if (typeof window.XMLSerializer != "undefined") {
+                return new window.XMLSerializer().serializeToString(xmlNode);
+            } else if (typeof xmlNode.xml != "undefined") {
+                return xmlNode.xml;
+            }
+            return "";
+        }
+        var data = `<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<tps:content xmlns:tps="http://www.typefi.com/ContentXML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaVersion="3.1" whiteSpaceMode="strict" xsi:schemaLocation="http://www.typefi.com/ContentXML http://www.typefi.com/TPS/content/3_1/ContentXML.xsd">
+  <tps:section id="62e28df4f1dc8" type="Country name">
+
+    <!-- NEW SET -->
+    <tps:p type="Set Head"><tps:style type="bold">1857<tps:s/></tps:style>(2 July)–<tps:style type="bold">59</tps:style>. Wmk Star, W w<tps:s/><tps:style type="bold">1</tps:style>. White paper.</tps:p>
+    <tps:p type="Split-heading">(a) Imperf</tps:p>
+
+    <!-- NEW SET -->
+    <tps:p type="Split-heading">(b) Unofficial perf 7&#xF662;&#x2044;&#xF657; (1s.9d.) or roul (others)</tps:p>
+    <tps:p type="footnote_cs">No. 6 (6d. purple-brown) occurs in various shades, some of which are deep, but must not be confused with No. 6<tps:style type="italic">a</tps:style>.</tps:p>
+    <tps:p type="footnote_cs">Nos. 13/15 were privately produced, probably by commercial firms for their own convenience.</tps:p>
+    <tps:p type="footnote_cs">The 10d. also exists with ‘CANCELLED’ in oval, but no examples are believed to be in private hands.</tps:p>
+
+    <!-- NEW SET -->
+    <tps:p type="Set Head"><tps:style type="bold">1857</tps:style>(Oct)–<tps:style type="bold">64</tps:style>. No wmk. Glazed paper.</tps:p>
+    <tps:p type="Split-heading">(a) Imperf</tps:p>
+    </tps:section>
+</tps:content>`
+
+          function hackit() {
+
+
+
+
+        var xmlData = $.parseXML(data);
+          console.log('xmlData', xmlData)
+        var parent = $(xmlData).find('Set Head');
+          const result = [];
+          let temp = []
+
+          console.log('parent', parent.length)
+
+          // kinda splits it up but not convinced
+        // const allNodes = [...parent.context.all]
+        // allNodes.forEach(node => Object.values(node.attributes).map((attr) => {
+        //   if (attr.nodeValue !== 'Set Head') {
+        //      temp.push(attr);
+        //   } else {
+        //     result.push(temp)
+        //     temp = [];
+        //   }
+        // }))
+
+        // console.log('nodeAttributes', nodeAttributes)
+      //   const createSetObjects = nodeAttributes.forEach(element => {
+      //     console.log('element', [...element])
+      //     (element || []).forEach((attribute) => {
+      //       console.log('attribute', attribute)
+      //     if (attribute.nodeValue === 'Set Head') {
+      //       result.push(attribute)
+      //     }
+      //   });
+      // });
+
+        console.log('result', result);
+
+        // result.forEach((item) => console.log('item', Object.values(item)))
+
+
+    }
+    </script>
+</head>
+<body onload="hackit()">
+
+Loaded.
+
+</body>
+</html>
